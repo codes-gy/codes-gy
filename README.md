@@ -1,201 +1,203 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=220&section=header&text=Ji%20Geunyeong%20|%20Backend%20Developer&desc=Backend-focused%20with%20React%20Frontend%20Skills&fontSize=32&descSize=16&animation=fadeIn&fontAlignY=38" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=220&section=header&text=Ji%20Geunyeong%20%7C%20Backend%20Developer&desc=Java%2FSpring%20%C2%B7%20Node.js%2FTypeScript&fontSize=28&descSize=16&animation=fadeIn&fontAlignY=38" width="100%"/>
 </div>
 
 <br/>
 
-Node.js, TypeScript, Java 기반의 백엔드 개발자
+**금융·SI 도메인 실무 4년차 백엔드 개발자**입니다.
+Java/Spring과 Node.js/TypeScript로 서비스를 만들고, 쿼리 최적화·보안·동시성 문제를 수치로 개선해 왔습니다.
 
-핵심역량
-- 백엔드 시스템 설계 및 개발 경험 보유
-- 객체지향적 도메인 모델 설계 및 Layered Architecture 구축 경험
-- SSE를 활용한 실시간 단방향 알림 및 이벤트 스트리밍 구현 경험
-- Git, GitHub을 활용한 Git-Flow 브랜치 전략 기반의 버전 관리 능력
-- AWS 등 클라우드 리소스 활용 및 서버 구축 경험 보유
-- Redis를 활용한 Session 관리, Caching, Rate Limiting 시스템 구축 경험
-- 기획, 디자인, 마케팅 직군과의 커뮤니케이션 능숙
+### 핵심역량
+
+- **금융·결제 도메인**: 보험 상품·계약·대출 비즈니스 로직, 대외기관 연동, 토스페이먼츠 결제·예치금 시스템 개발
+- **성능 최적화**: 조인 쿼리 분석·인덱스 튜닝으로 계약/대출 조회 응답 3초 → 2초 미만 단축
+- **보안**: 금융 민감정보 마스킹, 개인정보 암호화, API 접근 권한 보완 등 보안 취약점 조치
+- **실시간·동시성**: SSE 주문 상태 실시간 동기화, Redis Sorted Set 기반 대기열(p95 113ms), Socket.io 실시간 알림, 멱등성 키 기반 중복 주문 방지
+- **설계**: 도메인 이벤트 기반 모듈 연동, ArchUnit으로 강제하는 Layered Architecture
+- **인프라·자동화**: Docker, AWS S3, GitHub Actions CI(테스트 병렬화·빌드 캐시), Slack 알림 자동화
+- **협업**: PR 리뷰 중심 개발(최소 2인 승인), 기획·디자인·마케팅 직군과의 원활한 커뮤니케이션
+
 ---
+
 ### 기술 스택
 
-**백엔드**
+**Language**<br/>
 ![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=OpenJDK&logoColor=white)
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=flat-square&logo=Kotlin&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)
+
+**Backend**<br/>
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square&logo=Spring%20Boot&logoColor=white)
 ![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square&logo=Spring%20Security&logoColor=white)
+![Spring WebFlux](https://img.shields.io/badge/Spring%20WebFlux-6DB33F?style=flat-square&logo=Spring&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=Express&logoColor=white)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat-square&logo=Socket.io&logoColor=white)
 
-**프론트엔드**
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=TypeScript&logoColor=white)
+**Frontend**<br/>
 ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=Next.js&logoColor=white)
 
-**ORM**
+**ORM / Data Access**<br/>
 ![JPA/Hibernate](https://img.shields.io/badge/JPA%2FHibernate-59666C?style=flat-square&logo=Hibernate&logoColor=white)
+![MyBatis](https://img.shields.io/badge/MyBatis-B9271C?style=flat-square&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=Prisma&logoColor=white)
+![Flyway](https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=Flyway&logoColor=white)
 
-**테스트**
-![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=JUnit5&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=Jest&logoColor=white)
-
-**데이터베이스**
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white)
+**Database**<br/>
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=PostgreSQL&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white)
+![Oracle](https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=Oracle&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=Redis&logoColor=white)
 
-**개발 도구 및 환경**
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=GitHub&logoColor=white)
+**Test**<br/>
+![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=flat-square&logo=JUnit5&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-C21325?style=flat-square&logo=Jest&logoColor=white)
+![k6](https://img.shields.io/badge/k6-7D64FF?style=flat-square&logo=k6&logoColor=white)
+
+**Infra / Tools**<br/>
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=Docker&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=GitHub%20Actions&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=Git&logoColor=white)
 
 ---
 
-### 자격증 및 어학
-
-* **정보처리기사** | 한국산업인력공단 *(2024.09)*
-* **SQL 개발자 (SQLD)** | 한국데이터산업진흥원 *(2024.09)*
-  
----
 ### 경력사항
 
-* **[백엔드 개발]** | *(2021.11 ~ 2025.06)*
-  * 주요 직무
-    * 대고객 대표 홈페이지 기능 개발, 보험 상품 및 계약/대출 비즈니스 로직 고도화 및 안정화
-    * 타 금융사 및 대외 기관 연동 인터페이스 API 구현, 장기 계약 대출 원장 반영 파이프라인 개발
-  * 핵심성과
-    * 웹/모바일 홈페이지 시스템 운영 및 신규 기능 고도화 개발
-    * 조인 쿼리 분석 및 인덱스 최적화를 진행하여 평균 계약/대출 조회 응답 속도를 3초에서 2초 미만으로 단축 (30% 이상 개선)
-    * 무결성 검증 로직 강화를 통해 상품 및 대출 처리 중 발생하던 정합성 오류 0건 유지
-    * 대용량 고객 조회 및 보험 청구 처리 프로세스 개선을 위한 RESTful API 설계 및 DB Query 최적화
-    * 신규 보험 상품 출시 및 이벤트 페이지 대응을 위한 시스템 안정화 및 유지보수
-    * 주민등록번호, 계좌번호 등 금융 민감정보 조회 시 비즈니스 레이어 진입 전 마스킹 유틸리티를 구축하여 보안 유출 위험 차단
-    * 개인정보 암호화, API 접근 권한 미들웨어 보완, 보안 취약점 점검에 따른 조치 사항 대응 및 조치 완료
-    * 외부 연동 API 인터페이스 모듈 구축
-* **[백엔드/프론트 개발]** | *(2021.04 ~ 2021.11)*
-  * 주요 직무
-    * 고객사 맞춤형 웹/앱 서비스 백엔드 시스템 SI 구축 프로젝트 수행
-  * 핵심 성과
-    * 요구사항 분석 기반의 DB ERD 설계 및 핵심 비즈니스 로직 RESTful API 개발
-    * 특정 임계치 이상 에러 발생 시 팀원에게 알림을 발송하는 기능 구현으로 시스템 가용성 95% 이상 달성
-    * 인덱스 최적화를 통해 핵심 API 응답 속도를 평균 30% 단축
-    * 개인정보 암호화, API 접근 권한 미들웨어 보완, 보안 취약점 점검에 따른 조치 사항 대응 및 조치 완료
-    * Swagger를 도입하여 API 명세서 작성을 자동화하고 화면 설계 변경에 따른 프론트엔드와의 연동 기간 단축
-* **[백엔드 개발]** | *(2019.07 ~ 2019.12)*
-  * 주요 직무
-    * Spring 프레임워크 기반 마이그레이션, 로그인/마이페이지/상품 등 API 구현
-  * 핵심 성과
-    * Spring MVC(Controller-Service-Repository) 아키텍처 구조로 전면 리팩토링
-    * Spring Security를 적용하여 기존 로그인 로직의 보안 취약점을 개선하고 세션 관리 구조화
-    * 상품 이미지 업로드 API 구현 시, 파일 확장자 검증, MIME Type 화이트리스트 필터링, 파일 사이즈 엄격 제한 로직을 적용하여 보안 강화
-    * JUnit 기반의 단위 테스트 코드를 작성
-* **[백엔드/프론트 개발]** | *(2018.04 ~ 2019.06)*
-  * 주요 직무
-    * 실시간 출결 API 백엔드 개발, 관리자 대시보드/통계 구현
-  * 핵심 성과
-    * 출결 적재와 알림 발송을 논블로킹 스레드 풀로 격리, 피크 타임 알림 유실 및 데이터 누락 0% 달성
-    * 식별 정보와 타임스탬프 기반 단기 인메모리 락 제어를 적용하여 동시성 요청을 제어하고, 피크 타임 출결 중복 적재 발생 건수 0건 유지
-    * 생년월일, 연락처 등 고유 식별정보 조회 시 마스킹 유틸리티를 구축하여 보안 유출 위험 차단
-    * 사용자/태깅 출결 데이터 수집 처리
-    * 대량 문자열 조립 시 StringBuilder 활용으로 피크 타임 힙 영역 메모리 점유율 25% 이상 감소
-    * 비즈니스 로직 진입 전 인터셉터에서 1차 패킷 구조 검증을 수행하여 비효율적인 비즈니스 연산 비용 35% 절감
+**보험사 대고객 홈페이지 운영 및 고도화** · 백엔드 개발 (프리랜서) | *2021.11 ~ 2025.06*
+- 계약/대출 조회 쿼리의 조인 구조 분석 및 인덱스 최적화로 **평균 응답 3초 → 2초 미만 (약 33% 단축)**
+- 주민등록번호·계좌번호 등 금융 민감정보를 비즈니스 레이어 진입 전에 마스킹하는 유틸리티 구축
+- 무결성 검증 로직을 강화해 상품·대출 처리 중 발생하던 정합성 오류를 해소하고, 이후 운영 기간 **재발 0건** 유지
+
+<details>
+<summary>상세 보기</summary>
+
+- **주요 직무**
+  - 대고객 대표 홈페이지(웹/모바일) 운영, 보험 상품 개정·신규 개발
+  - 장기 계약 대출 API 설계·구현 및 대출 원장 반영 파이프라인 개발
+  - 본인인증, 타 금융사·대외기관 연동 인터페이스 모듈 개발
+- **추가 성과**
+  - 대용량 고객 조회 및 보험 청구 처리 프로세스 개선을 위한 RESTful API 재설계 및 쿼리 최적화
+  - 개인정보 암호화, API 접근 권한 검증 보완 등 보안 취약점 점검 결과 조치 완료
+  - 신규 상품 출시·이벤트 페이지 오픈 시 시스템 안정화 대응
+- **사용 기술**: Java, Spring, MyBatis, Oracle, JUnit, TFS
+
+</details>
+
+**고객사 웹/앱 서비스 SI 구축** · 백엔드 개발 | *2021.04 ~ 2021.11*
+- 요구사항 분석 기반 DB ERD 설계 및 핵심 비즈니스 로직 RESTful API 개발
+- 인덱스 최적화로 핵심 API **평균 응답 시간 30% 단축**
+- 에러가 임계치를 넘으면 팀에 즉시 알림을 보내는 모니터링 기능을 구현해, 사용자 문의 전에 장애를 먼저 인지하는 체계 마련
+
+<details>
+<summary>상세 보기</summary>
+
+- Swagger 도입으로 API 명세 작성을 자동화하여 화면 설계 변경 시 프론트엔드와의 연동 기간 단축
+- 개인정보 암호화, API 접근 권한 미들웨어 보완 등 보안 취약점 점검 결과 조치 완료
+
+</details>
 
 ---
 
-### 활동 및 교육
-
-* **[코드잇 / 클라우드 기반 Node.js 엔지니어 부트캠프]** | 수료 *(2025.10 ~ 2026.05)*
-  * 과정 요약
-    * Node.js 및 TypeScript 환경에서 계층형 아키텍처를 활용한 서버 개발 과정 이수
-    * 팀원과 함께 마이크로서비스 아키텍처 기반의 실무형 백엔드 프로젝트 3개 기획 및 개발
-    * PR 중심의 엄격한 팀 내 코드 리뷰 프로세스 경험
-    * Cloud(AWS) 인프라 기반 배포 파이프라인(CI/CD) 구축 및 Docker 컨테이너 경험
-  * 프로젝트 경험
-    * 프로젝트 명 : WeLive (아파트 입주민-관리사무소 간 실시간 상호 관리 플랫폼)
-    * 참여기간 : 2026.04 ~ 2026.05
-    * 주요 기능
-      * 권한별 대시보드, 입주민 명부 관리 및 자동 가입 승인 시스템, 민원/투표/공지사항 관리, 실시간 푸시 알림
-    * 핵심 성과
-      * JWT 기반의 토큰 인증 구현
-      * 역할 기반 권한 제어 시스템을 설계하여 보안 강화
-      * Socket.io를 활용한 실시간 알림 시스템 개발
-      * 다중 관계형 스키마를 설계하고, 자동 가입 승인 로직 구현
-      * 기능 단위의 브랜치 전략 주도
-      * `최소 2인 이상 승인 후 머지` 규칙을 준수하여 개발 프로세스 중 코드 결함 최소화
-    * 담당 역할
-      * 슈퍼관리자 / 관리자 / 입주민 3단계 권한을 제어하는 인가 미들웨어 구현
-      * 아파트, 동·호수, 입주민 명부 등 관계형 데이터 구조를 설계하고, 입주민 자동 가입 승인 로직 구현
-      * Socket.io 웹소켓을 연동하여 공지사항 등록 및 민원 상태 변경 시 관리자에게 실시간 알림 전달 프로세스 구축
-
----
 ### 주요 프로젝트
-**[대규모 트래픽 대기열 시스템]** (개인 프로젝트)
-* 프로젝트 개요
-  * 대규모 트래픽 폭주 상황에서 서버의 부하를 방지하고 안정적인 진입을 보장하는 대기열 시스템 개발 
-* 담당 역할
-  * 요청 인입 순서대로 타임스탬프 기반 Score를 부여하여 중복 없는 대기 순번 부여 로직 구현
-  * 사용자별 대기 순위 및 진입 예상 시간을 주기적으로 리턴하는 Netty 기반 백엔드 API 구현
-  * 대기열 진입 및 상태 전환 시 발생하는 Race Condition을 방지하여 데이터 정합성 보장
-  * 가상 트래픽 환경을 시뮬레이션하여 동시성 인입 요청 수 처리 한계점 및 자원 점유율 분석
-* 사용 기술
-  * Java, Spring Boot, Spring WebFlux, Reactive Redis, Gradle, K6, Git
 
-**[포스트 관리 디스코드 봇]** (개인 프로젝트)
-* 프로젝트 개요
-  * 게임 커뮤니티 서버 내 대량의 포스트 데이터를 효율적으로 생성, 수정, 조회, 통계 분석하는 자동화 봇 개발
-* 담당 역할
-  * discord.js 활용한 슬래시 명령어 설계
-  * SlashCommandBuilder 기반 다중 파라미터 사전 유효성 검증 레이어 개발
-  * 배열 필터링 기반의 명단 데이터 안전 삭제 및 텍스트 영속성 유지
-  * 데이터 풀 스캔 시 성능 저하 방지를 위한 비동기 병렬 처리 최적화
-  * Jest 프레임워크를 활용한 비즈니스 로직 단위 테스트 및 코드 커버리지 확보
-  * 연산 부하가 큰 통계 및 전체 조회 요청 시 성능 저하를 방지하기 위해 Redis 캐시 레이어 적용
-* 사용 기술
-  * Node.js, TypeScript, discord.js, Redis, Jest, Git
+**[BBCC](https://github.com/prgrms-be-adv-devcourse/beadv8_8_BBCC_BE)** · 팀 프로젝트 (프로그래머스 데브코스 단기심화) | *2026.10 ~ 진행 중*
+- **결제·예치금 도메인 담당** (PR 67건)
+- 토스페이먼츠 결제 승인·취소·조회 클라이언트와 예치금 충전 요청·승인·취소 API 구현
+- 토스에서 직접 취소된 충전을 웹훅으로 동기화하고, 미확정·만료 충전을 스케줄러로 정리해 결제 상태 불일치 방지
+- 주문 결제 요청 → 예치금 차감, 주문 취소 → 환불, 정산 지급 → 판매자 입금을 **도메인 이벤트**로 연동하고, 수신 실패 시 재처리
+- 공통 기반 설계: 도메인 이벤트 공통 형식, ProblemDetail 오류 응답, 소프트 삭제 엔티티, traceId 로깅 필터, ArchUnit 계층 의존 규칙
+- CI 테스트 병렬화·Gradle 빌드 캐시, Flyway 스키마 관리, Slack 배포·이슈 진행률 알림 자동화
+- **사용 기술**: Java, Spring Boot, JPA, PostgreSQL, Flyway, Docker, GitHub Actions
 
-**[대고객 홈페이지 운영 및 고도화]** (프리랜서)
-* 프로젝트 개요
-  * 대고객 대표 홈페이지 기능 개발, 보험 상품 및 계약/대출 비즈니스 로직 고도화 및 안정화
-* 담당 역할
-  * 보험 상품 개정/신규 개발
-  * 장기 계약 대출 API 설계 및 구현
-  * 보안 취약점 조치 및 금융 민감 정보 자동 마스킹 체계 구축
-  * 본인인증/대외 연동 인터페이스 개발
-* 사용 기술
-  * Java, Spring, MyBatis, Oracle, JUnit, TFS
+**[카페 스마트오더 플랫폼](https://github.com/codes-gy/smart-order)** · 개인 프로젝트 | *2026.08 ~ 2026.09*
+- 출근 시간대 몰리는 음료 선주문을 처리하고, 매장의 조리·픽업 상태를 사용자에게 실시간으로 전달하는 스마트오더 서비스
+- **SSE**로 주문 상태 변경을 실시간 브로드캐스트하고, 구독 즉시 현재 상태를 보내 재연결 시에도 상태 누락 방지
+- 15초 주기 하트비트로 프록시·로드밸런서의 유휴 연결 종료를 막고, 끊긴 연결은 전송 실패 시점에 정리
+- **멱등성 키(X-Idempotency-Key)**로 네트워크 재시도에 의한 중복 주문 생성 방지
+- 주문 시점의 메뉴명·가격을 스냅샷으로 저장해 메뉴 변경 후에도 과거 주문 이력 정합성 보장
+- 카카오·Apple 소셜 로그인 + JWT 기반 Spring Security 인증, Haversine 거리 계산과 커서 페이징으로 주변 매장 조회
+- **사용 기술**: Kotlin, Spring Boot, Spring Security, JPA, PostgreSQL, Redis, Flyway, GitHub Actions
 
-**[대고객 공식 홈페이지 재구축]** (프리랜서)
-* 프로젝트 개요
-  * Spring 프레임워크 기반 마이그레이션, 로그인/마이페이지/상품 등 API 구현
-* 담당 역할
-  * 마이페이지, 상품 등 핵심 RESTful API 개발
-  * Spring Security 기반 인가 로직 구현
-  * 커서 기반 페이징 구현
-  * 이미지 업로드 API 구현 시, 파일 확장자 검증, MIME Type 화이트리스트 필터링, 파일 사이즈 제한 등 로직을 적용하여 보안 강화
-  * 상품 정보 노출, 카테고리별 조건 검색 및 페이징 성능 최적화를 위한 비즈니스 로직 개발
-* 사용 기술
-  * Java, Spring Boot, MyBatis, MySQL, JUnit, Git
+**[대규모 트래픽 대기열 시스템](https://github.com/codes-gy/waiting-api)** · 개인 프로젝트
+- 티켓 오픈 같은 순간 트래픽이 핵심 DB에 직접 몰리지 않도록 Redis 버퍼 대기열로 받는 시스템
+- Redis Sorted Set에 타임스탬프 기반 Score를 부여해 요청 순서대로 대기 순번과 예상 대기 시간 계산
+- 순번이 된 사용자에게만 TTL 5분짜리 진입 토큰을 발급하고, 필터에서 검증해 우회 접근 차단
+- k6 부하 테스트(최대 300 VUs): **실패율 0.00%, p95 113ms** (목표 200ms 미만 달성)
+- **사용 기술**: Java 21, Spring Boot, Spring WebFlux(Netty), Reactive Redis, k6
+
+**WeLive** · 팀 프로젝트 (코드잇 부트캠프) | *2026.04 ~ 2026.05*
+- 아파트 입주민과 관리사무소를 잇는 실시간 관리 플랫폼 (권한별 대시보드, 입주민 명부, 민원/투표/공지, 실시간 알림)
+- JWT 인증과 슈퍼관리자/관리자/입주민 3단계 역할 기반 인가 미들웨어 구현
+- 아파트·동·호수·입주민 명부 관계형 스키마를 설계하고 입주민 자동 가입 승인 로직 구현
+- Socket.io로 공지 등록·민원 상태 변경 시 실시간 알림 전송
+- 기능 단위 브랜치 전략을 주도하고 `최소 2인 승인 후 머지` 규칙으로 코드 결함 최소화
+- **사용 기술**: Node.js, TypeScript, Socket.io, JWT, AWS S3
+
+**[디스코드 봇](https://github.com/codes-gy/discord-bot)** · 개인 프로젝트
+- 유튜브 음악 재생, TTS 채널 읽어주기, 서버 유틸리티를 제공하는 디스코드 봇
+- 서버별 독립 재생 대기열과 버튼 기반 플레이어 조작(재생/스킵/반복/셔플) 구현
+- 음악 재생 중 TTS가 들어오면 음악을 일시정지하고 TTS를 먼저 재생한 뒤 이어서 재생하는 우선순위 인터럽트 처리
+- Redis에 채널 설정·사용자별 TTS 언어·재생 통계를 저장해 재시작 후에도 유지
+- GitHub Actions로 PR마다 빌드 검증 후 Render에 자동 배포
+- **사용 기술**: Node.js, TypeScript, discord.js v14, Redis, esbuild, GitHub Actions
 
 ---
 
-### ⚡ 트러블슈팅 경험 
-* **페이징 처리 시 데이터 누락 현상 해결**
-  * **문제:** 오프셋 방식 페이징 사용 시 데이터 변경으로 인해 순서가 밀려 특정 데이터를 가져오지 못하거나 중복 조회되는 현상 발생
-  * **원인:** 조회 과정에서 새 데이터가 추가되거나 삭제될 경우 데이터의 전체 순번이 밀려 이전 데이터가 다음 페이지로 포함되거나 건너뛰어짐  
-  * **해결:** 식별자로 커서 기반 페이징을 도입해 밀림 현상을 방지하고 DB 조회 성능 최적화 및 정확도 향상
-* **Socket.io Handshake 시 인증 헤더 파싱 미비**
-  * **문제:** 웹소켓 연결 시 특정 클라이언트 환경에서 소켓 인증이 실패하거나 400 에러와 함께 연결 재시도가 무한 반복되는 현상 발생
-  * **원인:** Passport HTTP 인증과 달리 Socket.io는 Handshake 패킷 전달 구조가 달라 Authorization 헤더의 Bearer 토큰 추출 및 예외 처리가 미흡함
-  * **해결:** Socket.io Handshake 과정에서 headers 내 Bearer 토큰을 직접 추출하는 파이프라인을 추가 구축하고, 예외 발생 시 ExtendedError로 포워딩하여 안전한 인증 실패 응답 처리
-* **파일 업로드 방식의 디스크 I/O 병목 및 Serverless/Stateless 제약 해결**
-  * **문제:** 다량의 파일 업로드 요청 시 백엔드 서버의 로컬 디스크 I/O 병목으로 타 API 응답이 지연되고, 컨테이너 재배포 시 업로드된 파일이 유실되는 현상 발생
-  * **원인:** multer.diskStorage()로 서버 로컬 디렉터리에 파일을 직접 저장을 시도함에 따라 디스크 쓰기 부하가 가중되고 컨테이너의 무상태성을 위반함
-  * **해결:** multer-s3를 도입해 파일 스트림을 AWS S3로 직접 전달하도록 개선하여 서버 디스크 I/O 부하를 제거하고, 메모리 버퍼 점유율 최적화 및 파일 저장소의 지속성 확보
+### ⚡ 트러블슈팅
 
+<details>
+<summary><b>오프셋 페이징의 데이터 누락·중복 조회</b></summary>
+
+- **문제**: 오프셋 페이징 중 데이터가 추가·삭제되면 특정 데이터가 누락되거나 중복 조회됨
+- **원인**: 조회 사이에 전체 순번이 밀려 이전 페이지 데이터가 다음 페이지에 포함되거나 건너뛰어짐
+- **해결**: 식별자 기반 커서 페이징을 도입해 밀림 현상을 없애고, 깊은 페이지에서의 조회 성능도 개선
+
+</details>
+
+<details>
+<summary><b>Socket.io Handshake 인증 실패 및 무한 재연결</b></summary>
+
+- **문제**: 일부 클라이언트 환경에서 소켓 인증이 실패하고, 400 에러와 함께 재연결이 무한 반복됨
+- **원인**: HTTP 요청용 Passport 인증과 달리 Socket.io Handshake는 전달 구조가 달라 Authorization 헤더의 Bearer 토큰 추출과 예외 처리가 누락됨
+- **해결**: Handshake 단계에서 headers의 Bearer 토큰을 직접 추출하는 인증 미들웨어를 추가하고, 실패 시 ExtendedError로 넘겨 클라이언트가 인증 실패를 명확히 받도록 처리
+
+</details>
+
+<details>
+<summary><b>로컬 디스크 업로드로 인한 I/O 병목과 컨테이너 재배포 시 파일 유실</b></summary>
+
+- **문제**: 파일 업로드가 몰리면 디스크 I/O 병목으로 다른 API 응답이 지연되고, 컨테이너를 재배포하면 업로드 파일이 사라짐
+- **원인**: `multer.diskStorage()`로 서버 로컬 디렉터리에 직접 저장해 디스크 쓰기 부하가 커지고, 컨테이너의 무상태성(Stateless) 원칙에 어긋남
+- **해결**: `multer-s3`로 파일 스트림을 AWS S3에 바로 전달해 서버 디스크 I/O를 제거하고 파일 저장소의 지속성 확보
+
+</details>
+
+---
+
+### 교육
+
+**프로그래머스 · 데브코스 백엔드 단기심화 8기** | *2026.10 ~ 진행 중*
+- Java/Spring 기반 팀 프로젝트 [BBCC](#주요-프로젝트) 진행 (결제·예치금 도메인 담당)
+
+**코드잇 · 클라우드 기반 Node.js 엔지니어 부트캠프** | 수료 *(2025.10 ~ 2026.05)*
+- Node.js·TypeScript 환경에서 계층형 아키텍처 기반 서버 개발
+- 실무형 백엔드 팀 프로젝트 3개 기획·개발 (대표: [WeLive](#주요-프로젝트))
+- PR 중심의 팀 코드 리뷰 프로세스, AWS 기반 CI/CD 파이프라인 및 Docker 컨테이너 배포 경험
+
+### 자격증
+
+- **정보처리기사** | 한국산업인력공단 *(2024.09)*
+- **SQL 개발자 (SQLD)** | 한국데이터산업진흥원 *(2024.09)*
 
 ---
 
 ### 연락처
-* **Email:** [podojjang_kr@naver.com](mailto:podojjang_kr@naver.com)
-* **Blog:** [https://dev-blog-topaz-rho.vercel.app/](https://dev-blog-topaz-rho.vercel.app/)
-* **GitHub:** [https://github.com/codes-gy](https://github.com/codes-gy)
+
+- **Email**: [podojjang_kr@naver.com](mailto:podojjang_kr@naver.com)
+- **Blog**: [dev-blog-topaz-rho.vercel.app](https://dev-blog-topaz-rho.vercel.app/)
+- **GitHub**: [github.com/codes-gy](https://github.com/codes-gy)
 
 <br/>
 
