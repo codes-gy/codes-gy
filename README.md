@@ -135,7 +135,7 @@ Java/Spring과 Node.js/TypeScript로 서비스를 만들고, 쿼리 최적화·�
 - 기능 단위 브랜치 전략을 주도하고 `최소 2인 승인 후 머지` 규칙으로 코드 결함 최소화
 - **사용 기술**: Node.js, TypeScript, Socket.io, JWT, AWS S3
 
-**[젤리봇 (디스코드 봇)](https://github.com/codes-gy/discord-bot)** · 개인 프로젝트
+**[디스코드 봇](https://github.com/codes-gy/discord-bot)** · 개인 프로젝트
 - 유튜브 음악 재생, TTS 채널 읽어주기, 서버 유틸리티를 제공하는 디스코드 봇
 - 서버별 독립 재생 대기열과 버튼 기반 플레이어 조작(재생/스킵/반복/셔플) 구현
 - 음악 재생 중 TTS가 들어오면 음악을 일시정지하고 TTS를 먼저 재생한 뒤 이어서 재생하는 우선순위 인터럽트 처리
@@ -146,6 +146,51 @@ Java/Spring과 Node.js/TypeScript로 서비스를 만들고, 쿼리 최적화·�
 ---
 
 ### ⚡ 트러블슈팅
+
+<details>
+<summary><b>PG 조회 오류를 결제 실패로 확정해 "카드는 결제됐는데 예치금 미입금" 위험</b> · BBCC</summary>
+
+- **문제**: 승인 중인 충전을 토스 조회로 확정하는 과정에서 401(키 교체·누락)이나 429(요청 제한)를 받으면 충전을 되돌릴 수 없는 `FAILED`로 끝냄. 토스에서는 실제로 `DONE`이었다면 카드는 결제됐는데 예치금은 들어오지 않음
+- **원인**: 조회 API의 4xx를 모두 "결제 거절"로 해석함. 조회 오류는 결제 상태가 아니라 조회 요청 자체가 실패한 것이라 결과를 확정할 근거가 없음
+- **해결**: 결제가 없다는 `NOT_FOUND_PAYMENT`만 거절로 보고, 나머지 4xx와 오류 코드 없는 4xx(프록시·게이트웨이 응답)는 **결과 모름(Unknown)** 으로 분리. 정리 스케줄러가 다음 주기에 다시 조회해 확정하도록 하고, 401·403·429 케이스 테스트 6건 추가 ([PR #355](https://github.com/prgrms-be-adv-devcourse/beadv8_8_BBCC_BE/pull/355))
+
+</details>
+
+<details>
+<summary><b>주문 취소 이벤트 처리 실패 시 환불 유실</b> · BBCC</summary>
+
+- **문제**: 주문 도메인의 취소 이벤트를 결제 도메인이 받아 예치금을 환불하는데, 처리 중 예외가 나면 환불이 영영 반영되지 않음
+- **원인**: 이벤트 리스너가 한 번 실패하면 다시 처리할 경로가 없었음
+- **해결**: 취소 처리를 `REQUIRES_NEW` 트랜잭션으로 분리해 실패분만 롤백하고, 실패한 주문을 재처리 테이블(주문 ID 유니크)에 시도 횟수·마지막 오류와 함께 기록. 1분 주기 스케줄러가 다시 처리하며, 환불 로직이 멱등이라 여러 번 실행돼도 한 번만 반영 ([PR #358](https://github.com/prgrms-be-adv-devcourse/beadv8_8_BBCC_BE/pull/358))
+
+</details>
+
+<details>
+<summary><b><code>ddl-auto=update</code>로 어긋난 서버 스키마 때문에 INSERT 실패</b> · BBCC</summary>
+
+- **문제**: dev 서버에서 주문 취소 환불, 구매확정 → 정산 대상 등록 INSERT가 실패
+- **원인**: 서버가 `ddl-auto=update`로 기동되면서 엔티티에서 사라진 옛 NOT NULL 컬럼·테이블이 그대로 남아, Flyway로 만든 스키마와 달라짐
+- **해결**: dev에 배포된 커밋 39개를 같은 조건으로 차례로 기동해 dev DB 이력을 로컬에서 재현하고, 새 DB와 컬럼·제약·인덱스를 비교해 차이를 찾음. 차이를 맞추는 `IF EXISTS` 마이그레이션을 추가하고 서버를 `ddl-auto=validate`로 전환해 스키마 변경을 Flyway로 일원화 ([PR #376](https://github.com/prgrms-be-adv-devcourse/beadv8_8_BBCC_BE/pull/376))
+
+</details>
+
+<details>
+<summary><b>다른 회원의 주문 조회·상태 변경·결제 확정이 가능한 IDOR 취약점</b> · 스마트오더</summary>
+
+- **문제**: 로그인만 하면 `orderId`를 바꿔 다른 회원의 주문과 SSE 스트림을 조회하고, 아무 주문의 상태를 바꾸거나 남의 주문을 결제 완료 처리할 수 있었음
+- **원인**: 인증(로그인 여부)만 확인하고 리소스 소유권과 역할(STORE_ADMIN)은 검증하지 않음
+- **해결**: JWT principal과 주문의 회원 ID·매장 ID를 비교하는 소유권 검증을 추가하고, 매장 API는 Security 설정에서 STORE_ADMIN으로 제한한 뒤 서비스 계층에서 같은 매장인지 다시 확인. 결제 확정에서는 남의 결제 존재 여부가 드러나지 않도록 404로 응답
+
+</details>
+
+<details>
+<summary><b>음성 채널에 들어가지만 소리가 나지 않는 문제</b> · 디스코드 봇</summary>
+
+- **문제**: 봇이 음성 채널에 입장하고 재생 상태도 정상인데 소리가 전혀 들리지 않음
+- **원인**: `@discordjs/voice`는 연결이 `Ready`가 되기 전에 보낸 오디오 패킷을 조용히 버리는데, 입장 직후 바로 `player.play()`를 호출함
+- **해결**: 연결이 `Ready` 상태가 될 때까지 최대 15초 기다린 뒤 재생하고, 시간을 넘기면 연결을 정리하고 오류를 알림. 배포 로그에 Opus 인코더·암호화 라이브러리 로드 여부(의존성 리포트)를 남겨 같은 증상의 원인을 바로 확인할 수 있게 함
+
+</details>
 
 <details>
 <summary><b>오프셋 페이징의 데이터 누락·중복 조회</b></summary>
