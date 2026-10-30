@@ -126,7 +126,7 @@
 
 ### 연락처
 
-- **Portfolio**: [ji-geunyeong.kro.kr](https://ji-geunyeong.kro.kr/)
+- **Website**: [ji-geunyeong.kro.kr](https://ji-geunyeong.kro.kr/)
 - **Email**: [podojjang_kr@naver.com](mailto:podojjang_kr@naver.com)
 - **GitHub**: [github.com/codes-gy](https://github.com/codes-gy)
 
