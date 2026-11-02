@@ -129,6 +129,7 @@
 - **Website**: [ji-geunyeong.kro.kr](https://ji-geunyeong.kro.kr/)
 - **Email**: [podojjang_kr@naver.com](mailto:podojjang_kr@naver.com)
 - **GitHub**: [github.com/codes-gy](https://github.com/codes-gy)
+- **Blog**: [velog.io/@codes-gy](https://velog.io/@codes-gy/posts)
 
 <br/>
 
