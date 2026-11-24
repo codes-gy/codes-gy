@@ -72,7 +72,13 @@
 
 **[문단속](https://github.com/codes-gy/mundansok)** — 기업 외부 노출 점검 서비스 · 개인 | *2026.10 ~ 진행 중*
 - 공격자와 같은 시선으로 회사 도메인을 먼저 점검해, 노출된 설정 파일 · 만료된 인증서 등 열려 있는 곳과 고치는 방법을 위험도순으로 안내
+- PR · push마다 GitHub Actions CI에서 JUnit 테스트 59개 실행
 - Java 21 · Spring Boot 4.1 · Spring Data JPA · Flyway · PostgreSQL · GitHub Actions · [상세](https://ji-geunyeong.kro.kr/projects/mundansok) · [서비스](https://mundansok.vercel.app/)(평일 11:30 ~ 23:00)
+
+**[지이잉](https://github.com/codes-gy/live-platform)** — PC 화면 공유 · 휴대폰 카메라 라이브 방송 · 개인(코드밋 공모전) | *2026.11*
+- 미디어는 LiveKit에 맡기고 서버는 토큰 발급과 방송 상태만 관리 — LiveKit 웹훅으로 방송을 끝내고, 직접 종료와 웹훅이 겹쳐도 잠금으로 한 번만 처리, 시청자 토큰으로는 송출 불가
+- PR · push마다 GitHub Actions CI에서 백엔드 JUnit 테스트 131개와 프론트 lint · build 실행
+- Java 25 · Spring Boot 4.1 · PostgreSQL 18 · Flyway · Next.js 16 · LiveKit(WebRTC SFU) · [상세](https://ji-geunyeong.kro.kr/projects/live-platform)
 
 **[LineUp](https://github.com/codes-gy/lineup)** — WebFlux · Redis 기반 고성능 대기열 서버 · 개인 | *2026.07*
 - 1초마다 내 순번을 보여 주고, 대기를 취소하면 줄에서 바로 빼 뒤 사람들의 순번을 당김 — 입장은 도착 순서대로 분당 약 100명
@@ -81,28 +87,37 @@
 
 **[Smart Order](https://github.com/codes-gy/smart-order)** — 카페 실시간 선주문 & 픽업 플랫폼 · 개인 | *2026.08 ~ 2026.09*
 - 요청마다 **멱등 키**를 받아 같은 키면 이미 만든 주문을 돌려주고, 동시에 들어와도 **DB 유니크 제약**으로 하나만 남김 — 같은 요청을 몇 번 보내도 주문은 하나
+- 백엔드 테스트 123개(`./gradlew build`)와 프론트 검사를 GitHub Actions CI로 실행
 - Kotlin · Spring Boot 4.1 · JPA · PostgreSQL · Flyway · Redis · Next.js · [상세](https://ji-geunyeong.kro.kr/projects/smart-order) · [서비스](https://smart-order-eta.vercel.app/)
 
 **[QuantPilot](https://github.com/codes-gy/QuantPilot)** — 전략 기반 주식 자동매매 · 개인 | *2026.09*
-- 실시간 시세마다 해당 종목 전략만 골라 이동평균 교차 · 가격 기준으로 매수 · 매도를 판단하고 주문 · 체결 확인 · 손익 반영까지 자동화 — 백엔드 테스트 34개로 검증
+- 실시간 시세마다 해당 종목 전략만 골라 이동평균 교차 · 가격 기준으로 매수 · 매도를 판단하고 주문 · 체결 확인 · 손익 반영까지 자동화
+- 백엔드 테스트 85개 통과(PR #3 실행 기준), GitHub Actions CI에서 ruff lint · pytest 실행
 - Python 3.12 · FastAPI · SQLAlchemy(async) · Celery · Redis · PostgreSQL · Flutter · [상세](https://ji-geunyeong.kro.kr/projects/quantpilot)
+
+**[youtube-summary](https://github.com/codes-gy/youtube-summary)** — Rust로 만든 영상 요약 PDF 생성기 · 개인 | *2026.11*
+- 내 컴퓨터에서 whisper.cpp로 받아쓰고 ffmpeg로 화면이 바뀌는 장면을 뽑은 뒤, Claude가 챕터별 요약을 써서 시간 링크가 달린 PDF로 생성 — 단계마다 결과를 저장해 중간에 멈춰도 이어서 실행
+- macOS · Linux · Windows 세 OS에서 GitHub Actions CI로 빌드와 테스트 52개 실행
+- Rust · axum · whisper.cpp · Typst · yt-dlp · ffmpeg · Claude · [상세](https://ji-geunyeong.kro.kr/projects/youtube-summary)
 
 **[위리브](https://github.com/team1-organization/nb07-welive-team1)** — 아파트 관리 · 입주민 소통 플랫폼 · 팀(코드잇) | *2026.03 ~ 2026.05*
 - **백엔드 — 인증 · 실시간 알림 · 스키마 · 배포**
 - 역할 · 아파트 단위 승인 흐름의 인증 API, 받는 사람별 방으로 보내는 실시간 알림, 반복 조회를 SSE 연결로 전환 — 권한 시나리오 8가지를 통합 테스트로 고정, main 머지 시 자동 배포
 - TypeScript · Express 5 · PostgreSQL · Prisma · Socket.io · Jest · AWS(EC2 · S3) · [상세](https://ji-geunyeong.kro.kr/projects/welive) · [서비스](https://nb07-welive-team1.vercel.app/)(평일 11:30 ~ 19:00)
 
-그 밖에: [디스코드 봇](https://github.com/codes-gy/discord-bot) — 유튜브 음악 재생 · TTS 읽어주기 봇(Node.js · TypeScript · discord.js v14 · Redis)
-
 ---
 
 ### 활동 · 교육
 
-**젝커톤 2026 — 젝트 X 스위프 AI 해커톤** | *2026.11.14 · 참가 예정*
-- AI 에이전트로 4시간 동안 MVP를 만드는 바이브톤(주제: 스포츠, 4인 팀)
+**실시간 방송 플랫폼 개발 공모전(코드밋)** | *2026.11.05 ~ 2026.11.19 · 참가*
+- 개인 참가 · 제출작 [지이잉](#프로젝트): PC 화면 공유, 휴대폰 카메라 라이브 송출, 로그인 없이 시청
 
-**프로그래머스 데브코스 백엔드 단기심화 8기** | *2026.09 ~ 진행 중*
-- 팀 프로젝트 [Kidly](#프로젝트)(5인)에서 결제 도메인 전담 · 팀 PR 263건 중 66건 작성
+**젝커톤 2026 — 젝트 X 스위프 AI 해커톤** | *2026.11.14 · 참가*
+- AI 에이전트로 4시간 동안 MVP를 만드는 바이브톤(주제: 스포츠, 4인 팀)
+- 실시간 팬심 주식 차트 '개미들의 경기장'에서 거래 도메인 · 트레이딩 화면 담당(웹소켓 거래 입구, 코멘트 API, 결산 · 명경기 순위 화면)
+
+**프로그래머스 데브코스 백엔드 단기심화 8기** | *2026.09 ~ 2026.11 · 수료*
+- 팀 프로젝트 [Kidly](#프로젝트)(5인)에서 결제 도메인 전담 · 팀 저장소에 내 PR 169건 머지(결제 46건, 2026.11.20까지)
 - CI · Claude 코드 리뷰 워크플로 구성, 배포 결과 슬랙 알림 · 하루 작업 요약 자동화, 팀 공통 계층 규칙 9개를 ArchUnit 테스트로 고정
 
 **스위프(SWYP) 웹 15기** | *2026.09 ~ 2026.10 · 완료*
@@ -119,6 +134,7 @@
 
 ### 자격증
 
+- **PCCE** (코딩필수역량인증, Java) | 프로그래머스 *(2026.11)*
 - **정보처리기사** | 한국산업인력공단 *(2024.09)*
 - **SQL 개발자 (SQLD)** | 한국데이터산업진흥원 *(2024.09)*
 
